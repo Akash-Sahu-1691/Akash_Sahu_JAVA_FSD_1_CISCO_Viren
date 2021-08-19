@@ -5,7 +5,7 @@ public class ClassM {
 
 
 
-		private int p = 100 ;
+		private int p = 100  ;
 		long l;
 		protected float pi;
 		
