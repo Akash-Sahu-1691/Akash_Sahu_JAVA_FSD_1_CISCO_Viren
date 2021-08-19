@@ -4,7 +4,7 @@ public class ClassP {
 
 	public void ClassPmethod()
 	{
-		new ClassM().methodClassM();
+		new ClassM().methodClassM() ;
 		new ClassN().methodClassN();
 	}
 	
