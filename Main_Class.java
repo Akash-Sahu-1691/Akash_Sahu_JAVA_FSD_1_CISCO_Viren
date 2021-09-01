@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main_Class {
 
-	public static void menu() {
+	public static void menu() {	//Method for Menu Options
 		System.out.println(" ");
 
 		System.out.println("What do you want to do:-");
@@ -35,9 +35,9 @@ public class Main_Class {
 
 		do {
 			File file = new File("C:\\Users\\akash\\eclipse-workspace\\CoreJava\\src\\CHECKING");
-			String contents[] = file.list();
+			String contents[] = file.list();//Storing files and folders name into a string array
 
-			menu();
+			menu();	//menu method called
 
 			int input = sc.nextInt();
 
@@ -49,14 +49,14 @@ public class Main_Class {
 					System.out.println(contents[i]);
 
 				break;
-			case 2:
+			case 2://Adding a file
 				System.out.println("Specify the file name with extension!");
 
 				try {
 					String s = sc.next();
-					file = new File("C:\\Users\\akash\\eclipse-workspace\\CoreJava\\src\\CHECKING\\" + s);
+					file = new File("C:\\Users\\akash\\eclipse-workspace\\CoreJava\\src\\CHECKING\\" + s);//path where you want to add a file
 
-					if (file.createNewFile()) {
+					if (file.createNewFile()) {//returns true , if file is created
 						System.out.println("New File is created:" + file.getName());
 					} else {
 						if (file.exists()) {
@@ -72,7 +72,8 @@ public class Main_Class {
 
 				break;
 
-			case 3:
+			case 3://To delete a file
+					
 				System.out.println("Specify the correct file name you want to delete");
 				String str = sc.next();
 
@@ -82,7 +83,7 @@ public class Main_Class {
 				for (int i = 0; i < contents.length; i++) {
 					Object check = contents[i];
 					if (str.equals(check)) {
-						flag1 = 1;
+						flag1 = 1;//Flag triggered means, user specifiede name and file in directory got matched
 						if (file1.delete())
 							System.out.println("File deleted :" + file1.getName());
 						else
@@ -95,7 +96,7 @@ public class Main_Class {
 
 				break;
 
-			case 4:
+			case 4://Searching a file
 				System.out.println("Enter the file name you want to search:");
 				String str1 = sc.next();
 
